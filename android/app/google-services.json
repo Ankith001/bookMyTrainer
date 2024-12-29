@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "680983638642",
+    "project_id": "bookmytrainer-97573",
+    "storage_bucket": "bookmytrainer-97573.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680983638642:android:d7be2fd9c4061a30c988eb",
+        "android_client_info": {
+          "package_name": "com.example.book"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSlOYDiiwepBEc1AMgqBwILYqd40Ydp7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
