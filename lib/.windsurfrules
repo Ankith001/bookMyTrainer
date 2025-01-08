@@ -1,0 +1,39 @@
+# Global Code Rules for BookMyTrainer
+
+## Architecture Rules
+- Follow Clean Architecture principles with layers: presentation, domain, application, infrastructure
+- Each feature should follow the same directory structure
+- Keep the dependency flow: presentation -> application -> domain <- infrastructure
+
+## Code Style
+- Use camelCase for variables and methods
+- Use PascalCase for classes and enums
+- Use snake_case for file names
+- Keep files focused and small (< 300 lines)
+- Write meaningful comments for complex logic
+
+## State Management
+- Use Bloc/Cubit for state management
+- Keep state classes immutable
+- Use freezed for data classes when possible
+
+## Error Handling
+- Use Either<Failure, Success> for error handling in the domain layer
+- Create specific failure classes for different types of errors
+- Handle all possible error cases
+
+## Testing
+- Write unit tests for all business logic
+- Write widget tests for complex UI components
+- Maintain test coverage above 80%
+
+## Dependencies
+- Keep dependencies up to date
+- Minimize external dependencies
+- Document why each dependency is needed
+
+## Performance
+- Avoid unnecessary rebuilds
+- Use const constructors when possible
+- Implement pagination for lists
+- Cache network responses appropriately

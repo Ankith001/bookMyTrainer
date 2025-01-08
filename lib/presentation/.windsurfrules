@@ -1,0 +1,37 @@
+# Presentation Layer Rules
+
+## Widget Structure
+- One widget per file
+- Use StatelessWidget when possible
+- Extract reusable widgets to shared components
+- Keep build methods clean and readable
+
+## UI Guidelines
+- Follow Material Design guidelines
+- Use theme colors and text styles from theme directory
+- Support both light and dark themes
+- Implement responsive layouts
+
+## State Management
+- Use BLoC/Cubit pattern for complex state
+- Keep presentation logic separate from business logic
+- Handle loading, success, and error states
+- Show appropriate feedback to users
+
+## Navigation
+- Use named routes
+- Handle deep linking properly
+- Implement proper back button behavior
+- Pass minimal data between screens
+
+## Form Handling
+- Validate input on change and submit
+- Show clear error messages
+- Handle keyboard properly
+- Support form state persistence
+
+## Accessibility
+- Add semantic labels
+- Support screen readers
+- Maintain proper contrast ratios
+- Handle different text sizes

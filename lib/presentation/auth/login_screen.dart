@@ -104,6 +104,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                             child: const Text('Login'),
                           ),
+                          IconButton(
+                            onPressed: () {
+                              context
+                                  .read<AuthBloc>()
+                                  .add(const AuthEvent.googleSignIn());
+                            },
+                            icon: const Icon(Icons.email_outlined),
+                          ),
                           const Spacer(),
                           SafeArea(
                             child: Row(

@@ -15,6 +15,7 @@ class AuthEvent with _$AuthEvent {
   }) = _LoginWithEmailAndPassword;
 
   const factory AuthEvent.logout() = _Logout;
+  const factory AuthEvent.googleSignIn() = _GoogleSignIn;
 
   const factory AuthEvent.emitFromAnywhere({required AuthState state}) =
       _EmitFromAnywhere;

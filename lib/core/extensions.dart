@@ -67,7 +67,6 @@ extension BuildContextExtension on BuildContext {
       ..removeCurrentSnackBar()
       ..showSnackBar(
         SnackBar(
-          // backgroundColor: scheme.onPrimaryContainer,
           behavior: SnackBarBehavior.floating,
           content: Text(
             '$value',

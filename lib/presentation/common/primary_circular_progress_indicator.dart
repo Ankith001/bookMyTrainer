@@ -10,17 +10,14 @@ class PrimaryCircularProgressIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: opacityColor ??
-          Colors.black.withOpacity(0.5), // Adjust the opacity as needed
+          Colors.black.withOpacity(0.2), // Adjust the opacity as needed
       child: Center(
         child: Container(
             padding: const EdgeInsets.all(4.0),
             decoration: BoxDecoration(
-                shape: BoxShape.circle, color: context.scheme.background),
+                shape: BoxShape.circle, color: context.scheme.surface),
             child: Transform.scale(
-                scale: 0.7,
-                child: const CircularProgressIndicator(
-                  strokeWidth: 5,
-                ))),
+                scale: 0.5, child: const CircularProgressIndicator())),
       ),
     );
   }

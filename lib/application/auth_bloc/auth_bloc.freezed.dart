@@ -24,6 +24,7 @@ mixin _$AuthEvent {
     required TResult Function(UserModel user, String password)
         loginWithEmailAndPassword,
     required TResult Function() logout,
+    required TResult Function() googleSignIn,
     required TResult Function(AuthState state) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -35,6 +36,7 @@ mixin _$AuthEvent {
     TResult? Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult? Function()? logout,
+    TResult? Function()? googleSignIn,
     TResult? Function(AuthState state)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -46,6 +48,7 @@ mixin _$AuthEvent {
     TResult Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult Function()? logout,
+    TResult Function()? googleSignIn,
     TResult Function(AuthState state)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
@@ -58,6 +61,7 @@ mixin _$AuthEvent {
     required TResult Function(_LoginWithEmailAndPassword value)
         loginWithEmailAndPassword,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GoogleSignIn value) googleSignIn,
     required TResult Function(_EmitFromAnywhere value) emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -69,6 +73,7 @@ mixin _$AuthEvent {
     TResult? Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GoogleSignIn value)? googleSignIn,
     TResult? Function(_EmitFromAnywhere value)? emitFromAnywhere,
   }) =>
       throw _privateConstructorUsedError;
@@ -80,6 +85,7 @@ mixin _$AuthEvent {
     TResult Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GoogleSignIn value)? googleSignIn,
     TResult Function(_EmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) =>
@@ -152,6 +158,7 @@ class _$InitImpl implements _Init {
     required TResult Function(UserModel user, String password)
         loginWithEmailAndPassword,
     required TResult Function() logout,
+    required TResult Function() googleSignIn,
     required TResult Function(AuthState state) emitFromAnywhere,
   }) {
     return init();
@@ -166,6 +173,7 @@ class _$InitImpl implements _Init {
     TResult? Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult? Function()? logout,
+    TResult? Function()? googleSignIn,
     TResult? Function(AuthState state)? emitFromAnywhere,
   }) {
     return init?.call();
@@ -180,6 +188,7 @@ class _$InitImpl implements _Init {
     TResult Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult Function()? logout,
+    TResult Function()? googleSignIn,
     TResult Function(AuthState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -198,6 +207,7 @@ class _$InitImpl implements _Init {
     required TResult Function(_LoginWithEmailAndPassword value)
         loginWithEmailAndPassword,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GoogleSignIn value) googleSignIn,
     required TResult Function(_EmitFromAnywhere value) emitFromAnywhere,
   }) {
     return init(this);
@@ -212,6 +222,7 @@ class _$InitImpl implements _Init {
     TResult? Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GoogleSignIn value)? googleSignIn,
     TResult? Function(_EmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return init?.call(this);
@@ -226,6 +237,7 @@ class _$InitImpl implements _Init {
     TResult Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GoogleSignIn value)? googleSignIn,
     TResult Function(_EmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -329,6 +341,7 @@ class _$CreateUserWithEmailAndPasswordImpl
     required TResult Function(UserModel user, String password)
         loginWithEmailAndPassword,
     required TResult Function() logout,
+    required TResult Function() googleSignIn,
     required TResult Function(AuthState state) emitFromAnywhere,
   }) {
     return createUserWithEmailAndPassword(user, password);
@@ -343,6 +356,7 @@ class _$CreateUserWithEmailAndPasswordImpl
     TResult? Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult? Function()? logout,
+    TResult? Function()? googleSignIn,
     TResult? Function(AuthState state)? emitFromAnywhere,
   }) {
     return createUserWithEmailAndPassword?.call(user, password);
@@ -357,6 +371,7 @@ class _$CreateUserWithEmailAndPasswordImpl
     TResult Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult Function()? logout,
+    TResult Function()? googleSignIn,
     TResult Function(AuthState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -375,6 +390,7 @@ class _$CreateUserWithEmailAndPasswordImpl
     required TResult Function(_LoginWithEmailAndPassword value)
         loginWithEmailAndPassword,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GoogleSignIn value) googleSignIn,
     required TResult Function(_EmitFromAnywhere value) emitFromAnywhere,
   }) {
     return createUserWithEmailAndPassword(this);
@@ -389,6 +405,7 @@ class _$CreateUserWithEmailAndPasswordImpl
     TResult? Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GoogleSignIn value)? googleSignIn,
     TResult? Function(_EmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return createUserWithEmailAndPassword?.call(this);
@@ -403,6 +420,7 @@ class _$CreateUserWithEmailAndPasswordImpl
     TResult Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GoogleSignIn value)? googleSignIn,
     TResult Function(_EmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -516,6 +534,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
     required TResult Function(UserModel user, String password)
         loginWithEmailAndPassword,
     required TResult Function() logout,
+    required TResult Function() googleSignIn,
     required TResult Function(AuthState state) emitFromAnywhere,
   }) {
     return loginWithEmailAndPassword(user, password);
@@ -530,6 +549,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
     TResult? Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult? Function()? logout,
+    TResult? Function()? googleSignIn,
     TResult? Function(AuthState state)? emitFromAnywhere,
   }) {
     return loginWithEmailAndPassword?.call(user, password);
@@ -544,6 +564,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
     TResult Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult Function()? logout,
+    TResult Function()? googleSignIn,
     TResult Function(AuthState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -562,6 +583,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
     required TResult Function(_LoginWithEmailAndPassword value)
         loginWithEmailAndPassword,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GoogleSignIn value) googleSignIn,
     required TResult Function(_EmitFromAnywhere value) emitFromAnywhere,
   }) {
     return loginWithEmailAndPassword(this);
@@ -576,6 +598,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
     TResult? Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GoogleSignIn value)? googleSignIn,
     TResult? Function(_EmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return loginWithEmailAndPassword?.call(this);
@@ -590,6 +613,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
     TResult Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GoogleSignIn value)? googleSignIn,
     TResult Function(_EmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -662,6 +686,7 @@ class _$LogoutImpl implements _Logout {
     required TResult Function(UserModel user, String password)
         loginWithEmailAndPassword,
     required TResult Function() logout,
+    required TResult Function() googleSignIn,
     required TResult Function(AuthState state) emitFromAnywhere,
   }) {
     return logout();
@@ -676,6 +701,7 @@ class _$LogoutImpl implements _Logout {
     TResult? Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult? Function()? logout,
+    TResult? Function()? googleSignIn,
     TResult? Function(AuthState state)? emitFromAnywhere,
   }) {
     return logout?.call();
@@ -690,6 +716,7 @@ class _$LogoutImpl implements _Logout {
     TResult Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult Function()? logout,
+    TResult Function()? googleSignIn,
     TResult Function(AuthState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -708,6 +735,7 @@ class _$LogoutImpl implements _Logout {
     required TResult Function(_LoginWithEmailAndPassword value)
         loginWithEmailAndPassword,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GoogleSignIn value) googleSignIn,
     required TResult Function(_EmitFromAnywhere value) emitFromAnywhere,
   }) {
     return logout(this);
@@ -722,6 +750,7 @@ class _$LogoutImpl implements _Logout {
     TResult? Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GoogleSignIn value)? googleSignIn,
     TResult? Function(_EmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return logout?.call(this);
@@ -736,6 +765,7 @@ class _$LogoutImpl implements _Logout {
     TResult Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GoogleSignIn value)? googleSignIn,
     TResult Function(_EmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -748,6 +778,147 @@ class _$LogoutImpl implements _Logout {
 
 abstract class _Logout implements AuthEvent {
   const factory _Logout() = _$LogoutImpl;
+}
+
+/// @nodoc
+abstract class _$$GoogleSignInImplCopyWith<$Res> {
+  factory _$$GoogleSignInImplCopyWith(
+          _$GoogleSignInImpl value, $Res Function(_$GoogleSignInImpl) then) =
+      __$$GoogleSignInImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GoogleSignInImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$GoogleSignInImpl>
+    implements _$$GoogleSignInImplCopyWith<$Res> {
+  __$$GoogleSignInImplCopyWithImpl(
+      _$GoogleSignInImpl _value, $Res Function(_$GoogleSignInImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GoogleSignInImpl implements _GoogleSignIn {
+  const _$GoogleSignInImpl();
+
+  @override
+  String toString() {
+    return 'AuthEvent.googleSignIn()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GoogleSignInImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(UserModel user, String password)
+        createUserWithEmailAndPassword,
+    required TResult Function(UserModel user, String password)
+        loginWithEmailAndPassword,
+    required TResult Function() logout,
+    required TResult Function() googleSignIn,
+    required TResult Function(AuthState state) emitFromAnywhere,
+  }) {
+    return googleSignIn();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(UserModel user, String password)?
+        createUserWithEmailAndPassword,
+    TResult? Function(UserModel user, String password)?
+        loginWithEmailAndPassword,
+    TResult? Function()? logout,
+    TResult? Function()? googleSignIn,
+    TResult? Function(AuthState state)? emitFromAnywhere,
+  }) {
+    return googleSignIn?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(UserModel user, String password)?
+        createUserWithEmailAndPassword,
+    TResult Function(UserModel user, String password)?
+        loginWithEmailAndPassword,
+    TResult Function()? logout,
+    TResult Function()? googleSignIn,
+    TResult Function(AuthState state)? emitFromAnywhere,
+    required TResult orElse(),
+  }) {
+    if (googleSignIn != null) {
+      return googleSignIn();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Init value) init,
+    required TResult Function(_CreateUserWithEmailAndPassword value)
+        createUserWithEmailAndPassword,
+    required TResult Function(_LoginWithEmailAndPassword value)
+        loginWithEmailAndPassword,
+    required TResult Function(_Logout value) logout,
+    required TResult Function(_GoogleSignIn value) googleSignIn,
+    required TResult Function(_EmitFromAnywhere value) emitFromAnywhere,
+  }) {
+    return googleSignIn(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Init value)? init,
+    TResult? Function(_CreateUserWithEmailAndPassword value)?
+        createUserWithEmailAndPassword,
+    TResult? Function(_LoginWithEmailAndPassword value)?
+        loginWithEmailAndPassword,
+    TResult? Function(_Logout value)? logout,
+    TResult? Function(_GoogleSignIn value)? googleSignIn,
+    TResult? Function(_EmitFromAnywhere value)? emitFromAnywhere,
+  }) {
+    return googleSignIn?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Init value)? init,
+    TResult Function(_CreateUserWithEmailAndPassword value)?
+        createUserWithEmailAndPassword,
+    TResult Function(_LoginWithEmailAndPassword value)?
+        loginWithEmailAndPassword,
+    TResult Function(_Logout value)? logout,
+    TResult Function(_GoogleSignIn value)? googleSignIn,
+    TResult Function(_EmitFromAnywhere value)? emitFromAnywhere,
+    required TResult orElse(),
+  }) {
+    if (googleSignIn != null) {
+      return googleSignIn(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GoogleSignIn implements AuthEvent {
+  const factory _GoogleSignIn() = _$GoogleSignInImpl;
 }
 
 /// @nodoc
@@ -837,6 +1008,7 @@ class _$EmitFromAnywhereImpl implements _EmitFromAnywhere {
     required TResult Function(UserModel user, String password)
         loginWithEmailAndPassword,
     required TResult Function() logout,
+    required TResult Function() googleSignIn,
     required TResult Function(AuthState state) emitFromAnywhere,
   }) {
     return emitFromAnywhere(state);
@@ -851,6 +1023,7 @@ class _$EmitFromAnywhereImpl implements _EmitFromAnywhere {
     TResult? Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult? Function()? logout,
+    TResult? Function()? googleSignIn,
     TResult? Function(AuthState state)? emitFromAnywhere,
   }) {
     return emitFromAnywhere?.call(state);
@@ -865,6 +1038,7 @@ class _$EmitFromAnywhereImpl implements _EmitFromAnywhere {
     TResult Function(UserModel user, String password)?
         loginWithEmailAndPassword,
     TResult Function()? logout,
+    TResult Function()? googleSignIn,
     TResult Function(AuthState state)? emitFromAnywhere,
     required TResult orElse(),
   }) {
@@ -883,6 +1057,7 @@ class _$EmitFromAnywhereImpl implements _EmitFromAnywhere {
     required TResult Function(_LoginWithEmailAndPassword value)
         loginWithEmailAndPassword,
     required TResult Function(_Logout value) logout,
+    required TResult Function(_GoogleSignIn value) googleSignIn,
     required TResult Function(_EmitFromAnywhere value) emitFromAnywhere,
   }) {
     return emitFromAnywhere(this);
@@ -897,6 +1072,7 @@ class _$EmitFromAnywhereImpl implements _EmitFromAnywhere {
     TResult? Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult? Function(_Logout value)? logout,
+    TResult? Function(_GoogleSignIn value)? googleSignIn,
     TResult? Function(_EmitFromAnywhere value)? emitFromAnywhere,
   }) {
     return emitFromAnywhere?.call(this);
@@ -911,6 +1087,7 @@ class _$EmitFromAnywhereImpl implements _EmitFromAnywhere {
     TResult Function(_LoginWithEmailAndPassword value)?
         loginWithEmailAndPassword,
     TResult Function(_Logout value)? logout,
+    TResult Function(_GoogleSignIn value)? googleSignIn,
     TResult Function(_EmitFromAnywhere value)? emitFromAnywhere,
     required TResult orElse(),
   }) {

@@ -1,0 +1,31 @@
+# Domain Layer Rules
+
+## Entities
+- Keep entities pure and framework-independent
+- Use immutable classes
+- Implement proper value equality
+- Include business validation logic
+
+## Use Cases
+- One use case per file
+- Follow single responsibility principle
+- Return Either<Failure, Success> for results
+- Document all use cases
+
+## Repositories
+- Define abstract repository interfaces
+- Use meaningful method names
+- Document expected behavior
+- Include proper error types
+
+## Value Objects
+- Validate domain primitives
+- Use custom value objects for complex types
+- Implement proper toString methods
+- Include proper validation messages
+
+## Business Rules
+- Keep business logic independent of UI
+- Implement domain-specific validation
+- Document business requirements
+- Write comprehensive unit tests

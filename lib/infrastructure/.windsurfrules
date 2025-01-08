@@ -1,0 +1,31 @@
+# Infrastructure Layer Rules
+
+## Data Sources
+- Implement proper error handling
+- Use appropriate caching strategies
+- Handle network timeouts
+- Document API endpoints
+
+## Repository Implementations
+- Implement repository interfaces from domain
+- Handle all error cases
+- Map DTOs to domain entities
+- Include proper logging
+
+## DTOs
+- Use freezed for data classes
+- Include fromJson and toJson methods
+- Validate incoming data
+- Handle null values appropriately
+
+## External Services
+- Isolate external service calls
+- Handle authentication properly
+- Implement retry mechanisms
+- Cache responses when appropriate
+
+## Security
+- Encrypt sensitive data
+- Implement proper token management
+- Follow security best practices
+- Handle expired tokens

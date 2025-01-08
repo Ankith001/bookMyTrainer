@@ -1,15 +1,17 @@
 import 'dart:developer';
 
-
 import 'package:bookmytrainer/core/utils/shared_pref_helper.dart';
 import 'package:bookmytrainer/domain/auth/i_auth_repository.dart';
 import 'package:bookmytrainer/domain/auth/models/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthRepository extends IAuthRepository {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   @override
   Future<bool> createUserWithEmailAndPassword({
@@ -75,6 +77,35 @@ class AuthRepository extends IAuthRepository {
       return true;
     } on FirebaseAuthException catch (e) {
       log('Error: $e');
+      return false;
+    }
+  }
+
+  @override
+  Future<bool> signInWithGoogle() async {
+    try {
+      final GoogleSignIn googleSignIn = GoogleSignIn();
+      final GoogleSignInAccount? googleSignInAccount =
+          await googleSignIn.signIn();
+      if (googleSignInAccount != null) {
+        final GoogleSignInAuthentication googleSignInAuthentication =
+            await googleSignInAccount.authentication;
+        final AuthCredential authCredential = GoogleAuthProvider.credential(
+            idToken: googleSignInAuthentication.idToken,
+            accessToken: googleSignInAuthentication.accessToken);
+
+        // Getting users credential
+        UserCredential result =
+            await _auth.signInWithCredential(authCredential);
+        User? user = result.user;
+
+        if (result != null) {
+          return true;
+        } // if result not null we simply call the MaterialpageRoute,
+        // for go to the HomePage screen
+      }
+      return false;
+    } catch (e) {
       return false;
     }
   }

@@ -14,4 +14,5 @@ abstract class IAuthRepository {
   Future<bool> deleteUser();
 
   Future<bool> logOutUser();
+  Future<bool> signInWithGoogle();
 }

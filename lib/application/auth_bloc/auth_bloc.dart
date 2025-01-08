@@ -1,5 +1,3 @@
-
-
 import 'package:bookmytrainer/domain/auth/i_auth_repository.dart';
 import 'package:bookmytrainer/domain/auth/models/user_model.dart';
 import 'package:bookmytrainer/infrastructure/auth_repository.dart';
@@ -68,6 +66,21 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(state.copyWith(isLoading: false));
       }
     });
+
+    on<_GoogleSignIn>(
+      (event, emit) async {
+        emit(state.copyWith(isLoading: true));
+        final res = state.authRepo.signInWithGoogle();
+        if (res.toString() == "true") {
+          print('object');
+          emit(state.copyWith(isLoading: false));
+        } else {
+          print("failed");
+          emit(state.copyWith(isLoading: false));
+        }
+        emit(state.copyWith(isLoading: false));
+      },
+    );
 
 // emit from anywhere
     on<_EmitFromAnywhere>((event, emit) {

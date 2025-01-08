@@ -1,0 +1,31 @@
+# Application Layer Rules
+
+## Blocs/Cubits
+- One Bloc/Cubit per feature
+- Keep states immutable
+- Use meaningful event/state names
+- Handle all possible states
+
+## State Management
+- Define clear state classes
+- Include loading states
+- Handle error states
+- Implement proper state transitions
+
+## Event Handling
+- Clear event naming
+- Document event handlers
+- Proper error propagation
+- Handle concurrent events
+
+## Dependencies
+- Inject dependencies
+- Use repository abstractions
+- Follow dependency inversion
+- Document dependencies
+
+## Error Handling
+- Map domain errors to UI errors
+- Include user-friendly messages
+- Log errors appropriately
+- Handle edge cases

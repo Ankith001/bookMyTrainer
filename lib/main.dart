@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         routerConfig: router,
         debugShowCheckedModeBanner: false,
-        title: 'SubManager',
+        title: 'bookMyTrainer',
         theme: ThemeData(
           useMaterial3: false,
           scaffoldBackgroundColor: Colors.white,
